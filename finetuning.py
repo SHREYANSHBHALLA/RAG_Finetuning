@@ -30,7 +30,6 @@ data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
 
 training_args = TrainingArguments(
     output_dir="./fine_tuned_llama2",
-    evaluation_strategy="no",
     learning_rate=2e-5,
     per_device_train_batch_size=1,
     gradient_accumulation_steps=16,  
